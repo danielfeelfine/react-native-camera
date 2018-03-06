@@ -314,12 +314,12 @@ static NSDictionary *defaultFaceDetectorOptions = nil;
             
             UIImage *takenImage = [UIImage imageWithData:imageData];
             
-            CGRect frame = [_previewLayer metadataOutputRectOfInterestForRect:self.frame];
-            CGImageRef takenCGImage = takenImage.CGImage;
-            size_t width = CGImageGetWidth(takenCGImage);
-            size_t height = CGImageGetHeight(takenCGImage);
-            CGRect cropRect = CGRectMake(frame.origin.x * width, frame.origin.y * height, frame.size.width * width, frame.size.height * height);
-            takenImage = [RNImageUtils cropImage:takenImage toRect:cropRect];
+            // CGRect frame = [_previewLayer metadataOutputRectOfInterestForRect:self.frame];
+            // CGImageRef takenCGImage = takenImage.CGImage;
+            // size_t width = CGImageGetWidth(takenCGImage);
+            // size_t height = CGImageGetHeight(takenCGImage);
+            // CGRect cropRect = CGRectMake(frame.origin.x * width, frame.origin.y * height, frame.size.width * width, frame.size.height * height);
+            // takenImage = [RNImageUtils cropImage:takenImage toRect:cropRect];
             
             if ([options[@"mirrorImage"] boolValue]) {
                 takenImage = [RNImageUtils mirrorImage:takenImage];
